@@ -9,14 +9,17 @@
   /**
   * add fade out animation using current element class and only css to
   * avoid using ng-hide or ng-show directives
+  * @fadeOutDirective delay to wait until apply
+  * @fadeOutDirectiveOrder extra delay to apply in case many items are being faded
+  * @fadeOutDirectiveClassName the base class that apply the transition effect
   * */
   mainModule.directive('fadeOutDirective', ['$timeout', function ($timeout) {
     return {
       restrict: 'A',
       link: function (scope, element, attrs) {
-        var delay = parseInt(attrs.adeOutDirective) || 5000,
-          order = parseInt(attrs.adeOutDirectiveOrder) || 0,
-          mainClassName = attrs.adeOutDirectiveClassName || '';
+        var delay = parseInt(attrs.fadeOutDirective) || 5000,
+          order = parseInt(attrs.fadeOutDirectiveOrder) || 0,
+          mainClassName = attrs.fadeOutDirectiveClassName || '';
 
         //if delay is less than 0 means we don't need to fade out
         if (delay < 0) {
