@@ -1,0 +1,38 @@
+<div data-ng-class="{'input-prepend': tagIcons.length}" class="input-append">
+  <div data-ng-if="tagIcons.length" class="add-on ">
+    <span data-ng-repeat="tag in tagIcons" data-ng-class="{'widgets-search-box-sprite-tag-icons': tag.imagePath.length === 0,'sprite-search-{{tag.text}}': tag.imagePath.length === 0}" data-tooltip-placement="bottom" data-tooltip="" data-i18n-attr="{'tooltip': tag.label}">
+      <img ng-show="tag.imagePath.length > 0" class="widgets-search-box-integrated-icon" ng-src="{{tag.imagePath}}" data-tooltip-placement="bottom" data-tooltip="" data-i18n-attr="{'tooltip': tag.label}">&#32;
+    </span>
+  </div>
+    <input ng-change="onChange" ng-trim="false" data-widgets-search-box-model ng-keyup="keypress($event)" data-ng-model="query.text" type="text" class="input-search" data-ng-class="{'input-search-with-tags': tagIcons.length}" data-i18n-attr="{placeholder: placeholder}"/>
+    <span class="add-on">
+      <ul>
+        <li class="dropdown pull-right">
+          <a class="btn-link dropdown-toggle search-box-menu-opener" data-tooltip-placement="left" data-tooltip="" data-i18n-attr="{'tooltip': tooltipData}">
+            <span class="gear-button"></span>
+          </a>
+          <ul class="dropdown-menu" data-widgets-stop-event="click">
+            <li data-ng-repeat="item in tags">
+              <a data-ng-click="addTag($index)" class="btn-link text-left">
+                <span data-ng-class="{'widgets-search-box-show-check': tagsStateMap[item.text], 'widgets-search-box-hide-check': !tagsStateMap[item.text]}" >
+                  <i class="icon-ok"></i>
+                </span>
+                <span class="search-box-key ">{{item.label}}</span>
+              </a>
+            </li>
+            <li>
+              <div class="divider"></div>
+            </li>
+            <li>
+              <a data-ng-click="doAdvancedSearch()" class="btn-link text-left">
+                <span class="widgets-search-box-hide-check">
+                  <i class="icon-search"></i>
+                </span>
+                <span class="search-box-key ">{{advancedSearch.label}}</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </span>
+</div>

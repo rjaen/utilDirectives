@@ -1,0 +1,89 @@
+.input-prepend .add-on {
+  background-color: white;
+  border-right: 0;
+}
+
+.widgets-search-box-sprite-tag-icons {
+  display: inline-block;
+  background: url('/icons/search-icons.png') no-repeat top left;
+}
+.sprite-search-ExampleOfIcon{ background-position: 0 0; width: 25px; height: 20px; }
+
+input[type="text"].input-search-with-tags {
+  border-left: 0;
+  padding-left: 0;
+}
+
+input[type="text"].input-search:focus  {
+  border-color: #cccccc;
+  box-shadow: none;
+}
+
+.widgets-search-box > div > span > ul .search-box-key {
+  text-align: left;
+}
+
+.widgets-search-box > div > span > ul > li > ul {
+  min-width: 160px;
+}
+
+.widgets-search-box .icon-ok, .icon-search {
+  padding-left: 5px;
+}
+
+.widgets-search-box > div > span > ul> li > .dropdown-menu {
+  right: -15px
+}
+
+.widgets-search-box > div > span > ul> li > .dropdown-menu::before {
+  position: absolute;
+  top: -7px;
+  right: 15px;
+  display: inline-block;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #CCC;
+  border-left: 7px solid transparent;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  content: '';
+}
+
+.widgets-search-box > div > span > ul> li > .dropdown-menu::after {
+  position: absolute;
+  top: -6px;
+  right: 16px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  border-left: 6px solid transparent;
+  content: '';
+}
+
+.widgets-search-box .dropdown-menu > li > a {
+  padding-left: 8px;
+  padding-right: 10px;
+}
+
+.widgets-search-box-show-check {
+  visibility: show;
+}
+
+.widgets-search-box-hide-check {
+  visibility: hidden;
+}
+
+:hover > .widgets-search-box-hide-check {
+  visibility: visible;
+}
+
+.widgets-search-box-integrated-icon {
+  vertical-align: top;
+}
+
+.widgets-search-box > div > span > ul> li > .dropdown-menu > li:hover .icon-ok,
+.widgets-search-box > div > span > ul> li > .dropdown-menu > li:hover .icon-search {
+  background-image: url("../images/glyphicons-halflings-white.png");
+}
+
+.widgets-search-box > div > span > ul> li > .dropdown-menu > li:hover {
+  font-weight: normal;
+}
